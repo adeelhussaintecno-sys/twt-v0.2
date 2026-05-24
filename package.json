@@ -1,0 +1,17 @@
+{
+  "name": "twt-premium-bot",
+  "version": "1.2.0",
+  "description": "TWT Premium WhatsApp Bot",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "dependencies": {
+    "whatsapp-web.js": "^1.23.0",
+    "qrcode-terminal": "^0.12.0",
+    "qrcode": "^1.5.3"
+  }
+}
