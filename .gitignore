@@ -1,0 +1,11 @@
+node_modules
+.wwebjs_auth
+.wwebjs_cache
+logs
+database.json
+pending.json
+warnings.json
+screenshots
+*.log
+*.tmp
+backup_*.json
