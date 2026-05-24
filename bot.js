@@ -195,7 +195,22 @@ const pendingRemoval = {};
 log(`Bot v0.2 starting — Approved: ${Object.keys(database).length} | Pending: ${Object.keys(pending).length}`);
 log(`Screenshots folder: ${SCREENSHOTS_DIR}`);
 
-const client = new Client({ authStrategy: new LocalAuth() });
+const client = new Client({
+  authStrategy: new LocalAuth(),
+  puppeteer: {
+    headless: true,
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--disable-dev-shm-usage',
+      '--disable-accelerated-2d-canvas',
+      '--no-first-run',
+      '--no-zygote',
+      '--single-process',
+      '--disable-gpu'
+    ]
+  }
+});
 
 client.on('qr', qr => {
   qrcode.generate(qr, { small: true });
